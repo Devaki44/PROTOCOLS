@@ -26,8 +26,11 @@ UART_tx   uut2(clk,rst,start,data_in,p_sel,baud_tick,tx);
     		data_in = 8'b11001100;
     		p_sel = 1;     
     		start = 1;
- 		
-   		#12_000_000;
+
+ 		#12_000_00;
+		data_in = 8'b10101101;
+
+		#12_000_00;
 	 	$finish;
 	end
 	initial begin
@@ -35,3 +38,5 @@ UART_tx   uut2(clk,rst,start,data_in,p_sel,baud_tick,tx);
 		$dumpvars;
 	end
 endmodule	
+		
+
