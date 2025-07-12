@@ -23,4 +23,4 @@ always@(posedge clk)begin
 		baud_tick <= 0;
 	end
 end
-endmodul
+endmodule
