@@ -6,9 +6,10 @@ module top_module(
         input [7:0]data_in,
         input p_sel,
 
-        output tx,
         output [7:0]data_out,
         output p_err);
+
+wire tx;
 
 baud_tx uut_b0( .clk(clk1),
                  .rst(rst),
@@ -36,3 +37,4 @@ UART_rx   uut_r( .clk(clk2),
 assign rx=tx;
 
 endmodule
+        
